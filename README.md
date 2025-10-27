@@ -85,48 +85,27 @@ KPZ_Lab2_Matvieienko/
 
 ## Приклади використання
 
-### Функція add
-
 ```javascript
-import { add } from './utils';
-const result = add(5, 3); // 8
-```
+// Функція add
+console.log(add([1, 2, 3])); // 6
 
-### Функція capitalize
+// Функція capitalize
+console.log(capitalize('hello world'); // "Hello world"
 
-```javascript
-import { capitalize } from './utils';
-const text = capitalize('hello world'); // "Hello world"
-```
+// Функція formatNumber
+console.log(formatNumber(123.456, { precision: 2 })); // 123.46
 
-### Функція formatNumber
-
-```javascript
-import { formatNumber } from './utils';
-const formatted = formatNumber(1234567); // "1,234,567"
-```
-
-### Функція groupBy
-
-```javascript
-import { groupBy } from './utils';
-const data = [
-  { category: 'fruit', name: 'apple' },
-  { category: 'vegetable', name: 'carrot' },
-  { category: 'fruit', name: 'banana' },
+// Функція groupBy
+const users = [
+  { id: 1, name: 'Andrii', age: 22, city: 'Odesa' },
+  { id: 2, name: 'Maria', age: 25, city: 'Lviv' },
+  { id: 3, name: 'Ivan', age: 22, city: 'Odesa' },
 ];
-const grouped = groupBy(data, 'category');
-// { fruit: [...], vegetable: [...] }
-```
+console.log(groupBy(users, 'city'));
 
-### Клас Logger
-
-```javascript
-import { Logger } from './logger';
+// Клас Logger
 const logger = new Logger();
-logger.info('Інформаційне повідомлення');
-logger.warn('Попередження');
-logger.error('Помилка');
+logger.info('App started');
 ```
 
 ## Налаштування .env
